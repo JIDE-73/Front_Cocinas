@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import { projects, services } from '../data';
+import React, { useState, useEffect } from "react";
+import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+import { Link } from "react-router-dom";
+import { projects, services } from "../data";
 
 const heroImages = [
-  'https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&q=80',
-  'https://images.unsplash.com/photo-1556909190-eccf4a8bf97a?auto=format&fit=crop&q=80',
-  'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&q=80'
+  "https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&q=80",
+  "https://images.unsplash.com/photo-1556909190-eccf4a8bf97a?auto=format&fit=crop&q=80",
+  "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&q=80",
 ];
 
 const Home = () => {
@@ -24,7 +24,9 @@ const Home = () => {
   };
 
   const prevImage = () => {
-    setCurrentImage((prev) => (prev - 1 + heroImages.length) % heroImages.length);
+    setCurrentImage(
+      (prev) => (prev - 1 + heroImages.length) % heroImages.length
+    );
   };
 
   return (
@@ -35,7 +37,7 @@ const Home = () => {
           <div
             key={image}
             className={`absolute inset-0 transition-opacity duration-1000 ${
-              index === currentImage ? 'opacity-100' : 'opacity-0'
+              index === currentImage ? "opacity-100" : "opacity-0"
             }`}
           >
             <div
@@ -45,7 +47,7 @@ const Home = () => {
             <div className="absolute inset-0 bg-black bg-opacity-50" />
           </div>
         ))}
-        
+
         <div className="absolute inset-0 flex items-center justify-between px-4">
           <button
             onClick={prevImage}
@@ -68,7 +70,8 @@ const Home = () => {
                 Diseñamos cocinas que inspiran tu hogar
               </h1>
               <p className="text-xl md:text-2xl mb-8 max-w-2xl animate-fade-in-delay">
-                Transformamos espacios en experiencias únicas, donde la funcionalidad se encuentra con el diseño.
+                Transformamos espacios en experiencias únicas, donde la
+                funcionalidad se encuentra con el diseño.
               </p>
               <Link
                 to="/contact"
@@ -85,13 +88,12 @@ const Home = () => {
       {/* Featured Projects */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center mb-16">Proyectos Destacados</h2>
+          <h2 className="text-4xl font-bold text-center mb-16">
+            Proyectos Destacados
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {projects.map((project) => (
-              <div
-                key={project.id}
-                className="group relative overflow-hidden"
-              >
+              <div key={project.id} className="group relative overflow-hidden">
                 <div className="aspect-w-16 aspect-h-9 overflow-hidden">
                   <img
                     src={project.images[0]}
@@ -134,7 +136,10 @@ const Home = () => {
             <div>
               <h2 className="text-4xl font-bold mb-6">Nuestra Filosofía</h2>
               <p className="text-xl text-gray-600 mb-8">
-                Creemos en la perfecta armonía entre diseño y funcionalidad. Cada cocina que creamos es un reflejo de la personalidad de nuestros clientes, construida con los más altos estándares de calidad y atención al detalle.
+                Creemos en la perfecta armonía entre diseño y funcionalidad.
+                Cada cocina que creamos es un reflejo de la personalidad de
+                nuestros clientes, construida con los más altos estándares de
+                calidad y atención al detalle.
               </p>
               <Link
                 to="/about"
@@ -150,5 +155,8 @@ const Home = () => {
     </div>
   );
 };
-
+/*
+Desarrollado por Jimenez Delgado Leonardo Sebastian
+https://github.com/JIDE-73
+*/
 export default Home;

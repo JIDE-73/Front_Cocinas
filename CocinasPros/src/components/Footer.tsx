@@ -1,5 +1,12 @@
-import React from 'react';
-import { Phone, Mail, MapPin, Facebook, Instagram, Twitter } from 'lucide-react';
+import React from "react";
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Facebook,
+  Instagram,
+  Twitter,
+} from "lucide-react";
 
 const Footer = () => {
   return (
@@ -12,7 +19,7 @@ const Footer = () => {
               Transformando espacios en cocinas extraordinarias desde 2010.
             </p>
           </div>
-          
+
           <div>
             <h3 className="text-xl font-bold mb-4">Contacto</h3>
             <div className="space-y-2">
@@ -30,7 +37,7 @@ const Footer = () => {
               </p>
             </div>
           </div>
-          
+
           <div>
             <h3 className="text-xl font-bold mb-4">Síguenos</h3>
             <div className="flex space-x-4">
@@ -46,15 +53,19 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        
+
         <div className="mt-8 pt-8 border-t border-gray-700 text-center">
           <p className="text-gray-400">
-            © {new Date().getFullYear()} CocinasPro. Todos los derechos reservados.
+            © {new Date().getFullYear()} CocinasPro. Todos los derechos
+            reservados.
           </p>
         </div>
       </div>
     </footer>
   );
 };
-
+/*
+Desarrollado por Jimenez Delgado Leonardo Sebastian
+https://github.com/JIDE-73
+*/
 export default Footer;
