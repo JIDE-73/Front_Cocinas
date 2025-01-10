@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import { projects, services } from "../data";
+import { projects /*services*/ } from "../data";
 
 const heroImages = [
   "https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&q=80",
